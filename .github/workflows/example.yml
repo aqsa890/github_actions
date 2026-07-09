@@ -1,7 +1,7 @@
 name: Demo
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   Hello:
@@ -9,15 +9,4 @@ jobs:
     steps:
       - run: echo "Welcome to Github"
 
-  Test:
-    needs: Hello
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Running test cases"
-
-  Deploy:
-    needs: Test
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Deploying the app"
   
