@@ -6,3 +6,14 @@ jobs:
     steps:
       - name: Hello_step
         run: echo "Welcome to Github"
+ Test:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Test_phase
+       run: echo "Running test cases"
+Deploy:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Deploy_the_app
+       run: echo "Deploying the app"
+  
