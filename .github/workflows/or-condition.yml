@@ -1,0 +1,13 @@
+name: Or Condition Demo
+
+on:
+  push:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run for Aqsa or aqsa890
+        if: github.actor == 'Aqsa' || github.actor == 'aqsa890'
+        run: echo "Running for main branch"
